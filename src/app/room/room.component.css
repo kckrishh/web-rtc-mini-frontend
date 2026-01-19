@@ -1,0 +1,154 @@
+/* Layout wrapper */
+.room-wrapper {
+  min-height: 100vh;
+  background: #0f172a; /* dark slate */
+  color: #e5e7eb;
+  padding: 2rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Username box */
+.username-box {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 1.5rem;
+  max-width: 360px;
+}
+
+.username-box p {
+  margin: 0 0 0.75rem 0;
+  color: #9ca3af;
+}
+
+.username-box input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.username-box input:focus {
+  border-color: #3b82f6;
+}
+
+.username-box button {
+  margin-top: 0.75rem;
+  width: 100%;
+  padding: 0.65rem;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.username-box button:hover {
+  background: #1d4ed8;
+}
+
+/* Call controls */
+.call-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.call-controls .welcome {
+  margin: 0;
+  color: #9ca3af;
+}
+
+.call-btn {
+  background: #16a34a;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1.4rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.call-btn:hover {
+  background: #15803d;
+}
+
+.hangup-btn {
+  background: #7f1d1d;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1.4rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hangup-btn:hover {
+  background: #991b1b;
+}
+
+/* Video area */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Video box */
+.video-box {
+  position: relative;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+/* Label */
+.video-box span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  z-index: 2;
+}
+
+/* Video element */
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: black;
+}

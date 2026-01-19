@@ -1,0 +1,44 @@
+<div class="room-wrapper">
+  <!-- Header / Room info -->
+  <div class="room-header">
+    <h2>Room: {{ currentRoom }}</h2>
+  </div>
+
+  <!-- Username setup -->
+  <div class="username-box" *ngIf="!username">
+    <p>Enter a username before calling</p>
+
+    <input
+      type="text"
+      placeholder="Your username"
+      [(ngModel)]="usernameInput"
+      maxlength="20"
+    />
+
+    <button (click)="saveUsername()">Save</button>
+  </div>
+
+  <!-- Call controls -->
+  <div class="call-controls" *ngIf="username">
+    <p class="welcome">
+      Welcome, <strong>{{ username }}</strong>
+    </p>
+
+    <button class="call-btn" (click)="startCall()">📞 Start Call</button>
+
+    <button class="hangup-btn" (click)="hangup()">❌ Hang Up</button>
+  </div>
+
+  <!-- Video area -->
+  <div class="video-container">
+    <div class="video-box">
+      <span>You</span>
+      <video id="user-1" autoplay playsinline muted></video>
+    </div>
+
+    <div class="video-box">
+      <span>Remote</span>
+      <video id="user-2" autoplay playsinline></video>
+    </div>
+  </div>
+</div>

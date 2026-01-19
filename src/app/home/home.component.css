@@ -1,0 +1,52 @@
+/* Page background (optional but recommended) */
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background: #0f172a; /* dark slate */
+  color: #e5e7eb;
+}
+
+/* Center container */
+.room-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 15vh;
+}
+
+/* Room button */
+.room-btn {
+  background: #111827; /* dark card */
+  border: 1px solid #1f2933;
+  color: #e5e7eb;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+/* Hover */
+.room-btn:hover {
+  background: #1f2937;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Active / click */
+.room-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Focus (keyboard accessibility) */
+.room-btn:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 3px;
+}
