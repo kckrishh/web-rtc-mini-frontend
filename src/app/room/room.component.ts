@@ -18,15 +18,25 @@ export class RoomComponent implements OnInit {
   private remoteStream?: MediaStream;
 
   private servers: RTCConfiguration = {
-    iceServers: [
-      {
-        urls: [
-          'stun:stun1.l.google.com:19302',
-          'stun:stun2.l.google.com:19302',
-        ],
-      },
-    ],
-  };
+  iceServers: [
+    {
+      urls: ["stun:us-turn5.xirsys.com"]
+    },
+    {
+      username: "0F41B0u4SnqQA0cQCOdpipQ9sK2Vrj4u3ugnnrrzgJgNIapjGORhGm8NLzZSHyi7AAAAAGlt9MBLcmlzaA==",
+      credential: "8a623ef4-f516-11f0-9522-0242ac140004",
+      urls: [
+        "turn:us-turn5.xirsys.com:80?transport=udp",
+        "turn:us-turn5.xirsys.com:3478?transport=udp",
+        "turn:us-turn5.xirsys.com:80?transport=tcp",
+        "turn:us-turn5.xirsys.com:3478?transport=tcp",
+        "turns:us-turn5.xirsys.com:443?transport=tcp",
+        "turns:us-turn5.xirsys.com:5349?transport=tcp"
+      ]
+    }
+  ]
+};
+
 
   constructor(
     private stompService: StompService,
