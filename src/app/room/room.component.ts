@@ -135,11 +135,13 @@ export class RoomComponent implements OnInit {
 
     this.localStream = await navigator.mediaDevices.getUserMedia({
       video: true,
-      audio: false,
+      audio: true,
     });
 
     const localVideo = document.getElementById('user-1') as HTMLVideoElement;
     localVideo.srcObject = this.localStream;
+
+    localVideo.muted = true;
   }
 
   private ensurePeerConnection() {
