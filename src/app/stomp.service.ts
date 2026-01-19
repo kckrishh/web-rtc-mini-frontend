@@ -12,7 +12,7 @@ export class StompService {
 
   constructor() {
     this.client = new Client({
-      brokerURL: 'wss://web-rtc-mini-backend.onrender.com/ws'
+      brokerURL: 'wss://web-rtc-mini-backend.onrender.com/ws',
       reconnectDelay: 5000,
       onConnect: () => {
         console.log('connected');
